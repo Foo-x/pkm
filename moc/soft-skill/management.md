@@ -6,4 +6,5 @@ title: 🗂️マネジメント
 [📄ドキュメント管理](../../notes/document-management.md)  
 [📄問題解決](../../notes/problem-solving.md)  
 [📄プロジェクトマネジメント](../../notes/project-management.md)  
-[📄リカバリー](../../notes/recovery.md)
+[📄リカバリー](../../notes/recovery.md)  
+[📄フィードバック](../../notes/feedback.md)
