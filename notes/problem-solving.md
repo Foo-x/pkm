@@ -278,4 +278,4 @@ title: 📄問題解決
 
 - [問題解決 ― あらゆる課題を突破する ビジネスパーソン必須の仕事術](https://www.amazon.co.jp/dp/B00N0XOKZU)
 - [LAAD](http://la-ad.net/index.html)
-- [AsIs_ToBe_CT.md](https://gist.github.com/Foo-x/71c93e45f429fbe55862c6caf6c711f4)
+- [As-Is/To-Be×クリティカルシンキング](as-is-to-be-critical-thinking.md)
