@@ -7,4 +7,6 @@ title: 🗂️マネジメント
 [📄問題解決](../../notes/problem-solving.md)  
 [📄プロジェクトマネジメント](../../notes/project-management.md)  
 [📄リカバリー](../../notes/recovery.md)  
-[📄フィードバック](../../notes/feedback.md)
+[📄フィードバック](../../notes/feedback.md)  
+[📄リーダーシップ](../../notes/leadership.md)  
+[📄プラクティス](../../notes/practices.md)
