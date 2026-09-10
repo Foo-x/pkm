@@ -10,6 +10,6 @@ title: 💬コミュニケーション
 [📄ファシリテーション](../../notes/facilitation.md)  
 [📄質問の仕方](../../notes/how-to-ask.md)  
 [📄回答の仕方](../../notes/how-to-answer.md)  
-[📄同期と非同期](../../notes/synchronous-and-asynchronous.md)  
+[📄コミュニケーション_同期と非同期](../../notes/communication-synchronous-and-asynchronous.md)  
 [📄フォロワーシップ](../../notes/followership.md)  
 [📄フィードバック](../../notes/feedback.md)
