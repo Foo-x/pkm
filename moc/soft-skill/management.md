@@ -9,4 +9,4 @@ title: 🗂️マネジメント
 [📄リカバリー](../../notes/recovery.md)  
 [📄フィードバック](../../notes/feedback.md)  
 [📄リーダーシップ](../../notes/leadership.md)  
-[📄プラクティス](../../notes/practices.md)
+[📄プロジェクトマネジメント_プラクティス](../../notes/project-management-practices.md)
