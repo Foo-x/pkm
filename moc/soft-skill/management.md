@@ -11,4 +11,5 @@ title: 🗂️マネジメント
 [📄リーダーシップ](../../notes/leadership.md)  
 [📄プロジェクトマネジメント_プラクティス](../../notes/project-management-practices.md)  
 [📄開発速度向上](../../notes/development-speed.md)  
-[📄委任](../../notes/delegation.md)
+[📄委任](../../notes/delegation.md)  
+[📄優先順位判断](../../notes/prioritization.md)
