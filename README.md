@@ -1,6 +1,4 @@
----
-title: 繋 | tsunagi
----
+# tsunagi
 
 [foo-x](https://foo-x.com) のナレッジ置き場
 
@@ -21,6 +19,10 @@ title: 繋 | tsunagi
 [💻Bash](moc/language/bash.md)  
 [💻CSS](moc/language/css.md)  
 [💻TypeScript](moc/language/typescript.md)
+
+## インフラ
+
+[🌐DNS](moc/infrastructure/dns.md)
 
 ## ノート
 

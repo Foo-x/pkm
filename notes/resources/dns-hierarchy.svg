@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 680" width="780" height="680" font-family="Noto Sans CJK JP, sans-serif">
+  <rect x="0" y="0" width="780" height="680" fill="#ffffff"/>
+
+  <text x="390" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">DNSの階層構造とゾーン</text>
+
+  <!-- zone dashed boxes (drawn first, behind nodes) -->
+  <rect x="320" y="70" width="140" height="60" rx="8" fill="none" stroke="#94a3b8" stroke-dasharray="6 4"/>
+  <text x="320" y="62" font-size="12" fill="#64748b">ルートゾーン</text>
+
+  <rect x="170" y="178" width="140" height="64" rx="8" fill="none" stroke="#94a3b8" stroke-dasharray="6 4"/>
+  <text x="170" y="170" font-size="12" fill="#64748b">comゾーン（TLD）</text>
+
+  <rect x="490" y="178" width="140" height="64" rx="8" fill="none" stroke="#94a3b8" stroke-dasharray="6 4"/>
+  <text x="490" y="170" font-size="12" fill="#64748b">jpゾーン（TLD）</text>
+
+  <rect x="70" y="288" width="340" height="192" rx="8" fill="none" stroke="#94a3b8" stroke-dasharray="6 4"/>
+  <text x="78" y="304" font-size="12" fill="#64748b">example.comゾーン</text>
+
+  <!-- delegation arrows -->
+  <defs>
+    <marker id="arrow1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <line x1="365" y1="120" x2="255" y2="188" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow1)"/>
+  <line x1="415" y1="120" x2="545" y2="188" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow1)"/>
+  <text x="390" y="160" text-anchor="middle" font-size="11" fill="#475569">NSレコードで委任</text>
+
+  <line x1="240" y1="230" x2="240" y2="298" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow1)"/>
+  <text x="248" y="268" font-size="11" fill="#b45309">NS + グルーレコード</text>
+  <text x="248" y="282" font-size="10" fill="#b45309">（循環参照を回避）</text>
+
+  <line x1="240" y1="340" x2="160" y2="408" stroke="#475569" stroke-width="1.5"/>
+  <line x1="240" y1="340" x2="330" y2="408" stroke="#475569" stroke-width="1.5"/>
+  <text x="240" y="378" text-anchor="middle" font-size="10" fill="#64748b">同じゾーン内のレコード</text>
+
+  <!-- nodes -->
+  <g>
+    <rect x="335" y="80" width="110" height="40" rx="6" fill="#eef2ff" stroke="#6366f1"/>
+    <text x="390" y="105" text-anchor="middle" font-size="14" fill="#1f2937">.（ルート）</text>
+  </g>
+  <g>
+    <rect x="185" y="190" width="110" height="40" rx="6" fill="#eef2ff" stroke="#6366f1"/>
+    <text x="240" y="215" text-anchor="middle" font-size="14" fill="#1f2937">com</text>
+  </g>
+  <g>
+    <rect x="505" y="190" width="110" height="40" rx="6" fill="#eef2ff" stroke="#6366f1"/>
+    <text x="560" y="215" text-anchor="middle" font-size="14" fill="#1f2937">jp</text>
+  </g>
+  <g>
+    <rect x="185" y="300" width="110" height="40" rx="6" fill="#eef2ff" stroke="#6366f1"/>
+    <text x="240" y="325" text-anchor="middle" font-size="14" fill="#1f2937">example</text>
+  </g>
+  <g>
+    <rect x="95" y="410" width="110" height="40" rx="6" fill="#eef2ff" stroke="#6366f1"/>
+    <text x="150" y="435" text-anchor="middle" font-size="14" fill="#1f2937">www</text>
+  </g>
+  <g>
+    <rect x="275" y="410" width="110" height="40" rx="6" fill="#eef2ff" stroke="#6366f1"/>
+    <text x="330" y="435" text-anchor="middle" font-size="14" fill="#1f2937">blog</text>
+  </g>
+
+  <!-- authoritative server annotation (placed outside the zone box) -->
+  <rect x="430" y="378" width="34" height="26" rx="3" fill="#e2e8f0" stroke="#64748b"/>
+  <line x1="434" y1="386" x2="460" y2="386" stroke="#64748b" stroke-width="1"/>
+  <line x1="434" y1="394" x2="460" y2="394" stroke="#64748b" stroke-width="1"/>
+  <line x1="410" y1="400" x2="430" y2="391" stroke="#94a3b8" stroke-dasharray="3 3"/>
+  <text x="470" y="388" font-size="11" fill="#334155">権威DNSサーバー</text>
+  <text x="470" y="402" font-size="10" fill="#64748b">ゾーンの情報を保持し応答する</text>
+
+  <!-- FQDN readout -->
+  <rect x="60" y="495" width="660" height="150" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="390" y="518" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">FQDNの読み方（例: www.example.com.）</text>
+
+  <text x="250" y="548" font-family="monospace" font-size="20" fill="#1f2937">www.example.com.</text>
+
+  <path d="M250,558 L250,562 L286,562 L286,558" fill="none" stroke="#94a3b8"/>
+  <line x1="268" y1="562" x2="268" y2="572" stroke="#94a3b8"/>
+  <text x="268" y="586" text-anchor="middle" font-size="11" fill="#475569">ホスト名</text>
+
+  <path d="M298,558 L298,562 L430,562 L430,558" fill="none" stroke="#94a3b8"/>
+  <line x1="364" y1="562" x2="364" y2="572" stroke="#94a3b8"/>
+  <text x="364" y="586" text-anchor="middle" font-size="11" fill="#475569">ドメイン名</text>
+
+  <line x1="436" y1="555" x2="490" y2="572" stroke="#94a3b8"/>
+  <text x="494" y="586" font-size="10" fill="#64748b">（ルートを表す）</text>
+
+  <text x="390" y="610" text-anchor="middle" font-size="12" font-weight="bold" fill="#1f2937">FQDN = ホスト名 + ドメイン名</text>
+  <text x="390" y="630" text-anchor="middle" font-size="10" fill="#64748b">※ FQDNの左端のラベルがホスト名、残りがそのホストの属するドメイン名</text>
+</svg>

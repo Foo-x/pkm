@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540" font-family="Noto Sans CJK JP, sans-serif">
+  <rect x="0" y="0" width="800" height="540" fill="#ffffff"/>
+
+  <text x="400" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">名前解決の流れ（www.example.com のAレコードを引く例）</text>
+
+  <defs>
+    <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <!-- client -->
+  <rect x="30" y="220" width="150" height="80" rx="8" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="105" y="255" text-anchor="middle" font-size="13" fill="#1f2937">アプリ</text>
+  <text x="105" y="273" text-anchor="middle" font-size="11" fill="#475569">（スタブリゾルバ）</text>
+
+  <!-- cache resolver -->
+  <rect x="270" y="210" width="180" height="100" rx="8" fill="#ecfdf5" stroke="#10b981"/>
+  <text x="360" y="245" text-anchor="middle" font-size="13" fill="#1f2937">キャッシュDNSサーバー</text>
+  <text x="360" y="263" text-anchor="middle" font-size="11" fill="#475569">（フルサービスリゾルバ）</text>
+  <text x="360" y="283" text-anchor="middle" font-size="10" fill="#059669">応答をTTLの間キャッシュする</text>
+
+  <!-- servers -->
+  <text x="695" y="46" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400e">いずれも権威DNSサーバー</text>
+
+  <rect x="620" y="55" width="150" height="60" rx="8" fill="#fef3c7" stroke="#d97706"/>
+  <text x="695" y="82" text-anchor="middle" font-size="13" fill="#1f2937">ルートサーバー</text>
+  <text x="695" y="100" text-anchor="middle" font-size="10" fill="#92400e">（ルートゾーンの権威）</text>
+
+  <rect x="620" y="230" width="150" height="60" rx="8" fill="#fef3c7" stroke="#d97706"/>
+  <text x="695" y="257" text-anchor="middle" font-size="13" fill="#1f2937">TLDサーバー</text>
+  <text x="695" y="275" text-anchor="middle" font-size="10" fill="#92400e">（comゾーンの権威）</text>
+
+  <rect x="620" y="405" width="150" height="60" rx="8" fill="#fef3c7" stroke="#d97706"/>
+  <text x="695" y="432" text-anchor="middle" font-size="13" fill="#1f2937">権威DNSサーバー</text>
+  <text x="695" y="450" text-anchor="middle" font-size="10" fill="#92400e">（example.comゾーンの権威）</text>
+
+  <!-- client <-> cache -->
+  <line x1="180" y1="240" x2="270" y2="240" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <text x="225" y="230" text-anchor="middle" font-size="10" fill="#334155">① 再帰的問い合わせ</text>
+
+  <line x1="270" y1="290" x2="180" y2="290" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <text x="225" y="308" text-anchor="middle" font-size="10" fill="#334155">⑧ Aレコードを応答</text>
+
+  <!-- cache <-> root -->
+  <line x1="450" y1="240" x2="620" y2="90" stroke="#475569" stroke-width="1.3" marker-end="url(#arrow2)"/>
+  <text x="480" y="180" font-size="10" fill="#475569">② 反復問い合わせ</text>
+
+  <line x1="620" y1="105" x2="450" y2="255" stroke="#475569" stroke-width="1.3" marker-end="url(#arrow2)"/>
+  <text x="480" y="205" font-size="10" fill="#475569">③ comのNS（+グルー）を応答</text>
+
+  <!-- cache <-> tld -->
+  <line x1="450" y1="255" x2="620" y2="255" stroke="#475569" stroke-width="1.3" marker-end="url(#arrow2)"/>
+  <text x="535" y="248" text-anchor="middle" font-size="10" fill="#475569">④ 反復問い合わせ</text>
+
+  <line x1="620" y1="270" x2="450" y2="270" stroke="#475569" stroke-width="1.3" marker-end="url(#arrow2)"/>
+  <text x="535" y="288" text-anchor="middle" font-size="10" fill="#475569">⑤ example.comのNS（+グルー）を応答</text>
+
+  <!-- cache <-> auth -->
+  <line x1="450" y1="270" x2="620" y2="420" stroke="#475569" stroke-width="1.3" marker-end="url(#arrow2)"/>
+  <text x="480" y="340" font-size="10" fill="#475569">⑥ 反復問い合わせ</text>
+
+  <line x1="620" y1="435" x2="450" y2="285" stroke="#475569" stroke-width="1.3" marker-end="url(#arrow2)"/>
+  <text x="480" y="380" font-size="10" fill="#475569">⑦ Aレコードを応答</text>
+
+  <!-- legend -->
+  <rect x="30" y="480" width="740" height="40" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="45" y="504" font-size="11" fill="#334155">①⑧: アプリ⇔キャッシュDNSサーバー間は「再帰的問い合わせ」（最終的な答えが返るまで解決を代行してもらう）</text>
+  <text x="45" y="516" font-size="11" fill="#334155">②〜⑦: キャッシュDNSサーバー⇔各権威DNSサーバー間は「反復問い合わせ」（知っている範囲の答えのみが返る）</text>
+</svg>
