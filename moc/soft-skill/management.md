@@ -10,4 +10,5 @@ title: 🗂️マネジメント
 [📄フィードバック](../../notes/feedback.md)  
 [📄リーダーシップ](../../notes/leadership.md)  
 [📄プロジェクトマネジメント_プラクティス](../../notes/project-management-practices.md)  
-[📄開発速度向上](../../notes/development-speed.md)
+[📄開発速度向上](../../notes/development-speed.md)  
+[📄委任](../../notes/delegation.md)
