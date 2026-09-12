@@ -12,4 +12,6 @@ title: 🗂️マネジメント
 [📄プロジェクトマネジメント_プラクティス](../../notes/project-management-practices.md)  
 [📄開発速度向上](../../notes/development-speed.md)  
 [📄委任](../../notes/delegation.md)  
-[📄優先順位判断](../../notes/prioritization.md)
+[📄優先順位判断](../../notes/prioritization.md)  
+[📄リスク管理](../../notes/risk-management.md)  
+[📄リスク洗い出しチェックリスト](../../notes/risk-identification-checklist.md)
