@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 300" width="780" height="300" font-family="Noto Sans CJK JP, sans-serif">
+  <rect x="0" y="0" width="780" height="300" fill="#ffffff"/>
+
+  <text x="390" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">ローリングウェーブ計画</text>
+
+  <!-- time axis -->
+  <line x1="60" y1="230" x2="720" y2="230" stroke="#475569" stroke-width="1.5" marker-end="url(#rwArrow)"/>
+  <defs>
+    <marker id="rwArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <text x="720" y="252" text-anchor="middle" font-size="12" fill="#334155">時間</text>
+
+  <!-- near iteration: fine-grained task blocks -->
+  <rect x="70" y="150" width="26" height="60" fill="#fee2e2" stroke="#b91c1c"/>
+  <rect x="100" y="150" width="26" height="60" fill="#fee2e2" stroke="#b91c1c"/>
+  <rect x="130" y="150" width="26" height="60" fill="#fee2e2" stroke="#b91c1c"/>
+  <rect x="160" y="150" width="26" height="60" fill="#fee2e2" stroke="#b91c1c"/>
+  <text x="128" y="128" text-anchor="middle" font-size="12" fill="#7f1d1d"><tspan x="128">直近イテレーション</tspan><tspan x="128" dy="14">（作業単位）</tspan></text>
+
+  <!-- next iterations: feature-level blocks, coarser -->
+  <rect x="210" y="160" width="70" height="50" fill="#fef3c7" stroke="#b45309"/>
+  <rect x="290" y="160" width="70" height="50" fill="#fef3c7" stroke="#b45309"/>
+  <text x="280" y="128" text-anchor="middle" font-size="12" fill="#92400e"><tspan x="280">近いイテレーション</tspan><tspan x="280" dy="14">（フィーチャー単位）</tspan></text>
+
+  <!-- far future: theme-level, very coarse -->
+  <rect x="380" y="170" width="150" height="40" fill="#e5e7eb" stroke="#6b7280"/>
+  <rect x="540" y="170" width="150" height="40" fill="#e5e7eb" stroke="#6b7280"/>
+  <text x="530" y="128" text-anchor="middle" font-size="12" fill="#374151"><tspan x="530">先のイテレーション</tspan><tspan x="530" dy="14">（テーマ単位）</tspan></text>
+
+  <!-- milestones across the whole timeline -->
+  <polygon points="183,90 193,100 183,110 173,100" fill="#4338ca"/>
+  <polygon points="453,90 463,100 453,110 443,100" fill="#4338ca"/>
+  <polygon points="663,90 673,100 663,110 653,100" fill="#4338ca"/>
+  <text x="390" y="70" text-anchor="middle" font-size="12" fill="#4338ca">◆ マイルストーン（先まで固定）</text>
+
+  <!-- external dependency markers -->
+  <rect x="245" y="230" width="10" height="10" fill="#0f766e"/>
+  <rect x="605" y="230" width="10" height="10" fill="#0f766e"/>
+  <text x="390" y="270" text-anchor="middle" font-size="12" fill="#0f766e">■ 外部依存（先まで固定）</text>
+
+  <text x="390" y="292" text-anchor="middle" font-size="11" fill="#334155">先になるほど粒度は粗くなるが、マイルストーンと外部依存は先まで固定する</text>
+</svg>

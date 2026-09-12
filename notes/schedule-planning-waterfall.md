@@ -1,5 +1,5 @@
 ---
-title: 📄スケジュール計画
+title: 📄ウォーターフォールでのスケジュール計画
 ---
 
 ## スケジュール計画の進め方
@@ -139,6 +139,7 @@ title: 📄スケジュール計画
 
 ## 参考
 
+- [アジャイル開発でのスケジュール計画](schedule-planning-agile.md)
 - [プロジェクトマネジメント](project-management.md)
 - [プロジェクトマネジメント_プラクティス](project-management-practices.md)
 - [リスク管理](risk-management.md)
