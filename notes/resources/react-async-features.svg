@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 360" width="780" height="360" font-family="Noto Sans CJK JP, sans-serif">
+  <rect x="0" y="0" width="780" height="360" fill="#ffffff"/>
+
+  <text x="390" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">Reactの非同期機能の使い分け</text>
+
+  <defs>
+    <marker id="raArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="raArrowIndigo" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <!-- foundation -->
+  <rect x="290" y="48" width="200" height="42" rx="8" fill="#f1f5f9" stroke="#64748b"/>
+  <text x="390" y="74" text-anchor="middle" font-size="14" fill="#1f2937">並行レンダリング</text>
+
+  <line x1="390" y1="90" x2="145" y2="138" stroke="#475569" stroke-width="1.5" marker-end="url(#raArrow)"/>
+  <line x1="390" y1="90" x2="390" y2="138" stroke="#475569" stroke-width="1.5" marker-end="url(#raArrow)"/>
+  <line x1="390" y1="90" x2="635" y2="138" stroke="#475569" stroke-width="1.5" marker-end="url(#raArrow)"/>
+
+  <!-- column 1: 更新の反映 -->
+  <rect x="40" y="140" width="210" height="160" rx="8" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="145" y="168" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">更新の反映を待つ</text>
+  <text x="145" y="200" text-anchor="middle" font-size="13" fill="#334155">useTransition</text>
+  <text x="145" y="224" text-anchor="middle" font-size="13" fill="#334155">useDeferredValue</text>
+
+  <!-- column 2: データの到着 -->
+  <rect x="285" y="140" width="210" height="160" rx="8" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="390" y="168" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">データの到着を待つ</text>
+  <text x="390" y="200" text-anchor="middle" font-size="13" fill="#334155">Suspense</text>
+  <text x="390" y="224" text-anchor="middle" font-size="13" fill="#334155">use() / React.lazy</text>
+
+  <!-- column 3: 送信結果 -->
+  <rect x="530" y="140" width="210" height="160" rx="8" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="635" y="168" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">送信結果を待つ</text>
+  <text x="635" y="200" text-anchor="middle" font-size="13" fill="#334155">Actions（&lt;form action&gt;）</text>
+  <text x="635" y="224" text-anchor="middle" font-size="13" fill="#334155">useActionState</text>
+  <text x="635" y="248" text-anchor="middle" font-size="13" fill="#334155">useFormStatus / useOptimistic</text>
+
+  <!-- Actions is internally a Transition -->
+  <path d="M 635,300 L 635,318 L 145,318 L 145,300" fill="none" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#raArrowIndigo)"/>
+  <text x="390" y="345" text-anchor="middle" font-size="12" fill="#4338ca">点線: Actionsは内部的にTransitionとして扱われる</text>
+</svg>
